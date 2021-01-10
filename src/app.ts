@@ -4,6 +4,7 @@ import helmet from 'helmet';
 import cors from 'cors';
 import { Server } from 'http';
 import {errorHandler, notFound } from './middleware';
+import makeHandler from './utils/make-handler';
 
 const makeServer = async (): Promise<Server> => {
   const app = express();
@@ -15,9 +16,9 @@ const makeServer = async (): Promise<Server> => {
   app.use(cors());
 
   // add routes
-  app.get('/', (req: Request, res: Response) => {
+  app.get('/', makeHandler((req: Request, res: Response) => {
     res.json({ message: 'Hello world' });
-  });
+  }));
 
   app.use(notFound);
   app.use(errorHandler);
