@@ -1,17 +1,12 @@
-interface Message {
-  text: string;
-}
+import makeServer from './app';
 
-const message: Message = {
-  text: 'Hello world!',
+const init = async () => {
+  try {
+    await makeServer();
+  } catch (error) {
+    console.error(error);
+    process.exit(1);
+  }
 };
 
-const logEach5Sec = () => {
-  const interval = setInterval(() => {
-    console.log(message);
-    logEach5Sec();
-    clearInterval(interval);
-  }, 5000);
-};
-
-logEach5Sec();
+init();
