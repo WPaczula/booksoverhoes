@@ -1,14 +1,22 @@
-import React from 'react'
-import { Flex } from "@chakra-ui/react"
+import React from 'react';
+import { Flex } from "@chakra-ui/react";
+import Header from 'components/header';
+import Content from 'components/content';
 
 interface Props {
     children: React.ReactElement,   
 };
 
-const Layout = ({ children }: Props) => (
-  <Flex direction="column" align="center" maxW={{ xl: "1200px"}} m="0 auto">
-    {children}
-  </Flex>
-)
+export const maxWidth = '1200px';
+export const padding = "8";
 
-export default Layout
+const Layout = ({ children }: Props) => (
+  <Flex direction="column" minHeight="100vh">
+    <Header />
+    <Content>
+      {children}
+    </Content>
+  </Flex>
+);
+
+export default Layout;

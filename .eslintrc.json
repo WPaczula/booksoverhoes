@@ -27,6 +27,9 @@
         "react/jsx-filename-extension": [1, { "extensions": [".tsx"]}],
         "no-use-before-define": "off",
         "@typescript-eslint/no-use-before-define": ["error"],
-        "import/no-unresolved": "off"
+        "import/no-unresolved": "off",
+        "react/require-default-props": [1, { "ignoreFunctionalComponents": true }],
+        "import/extensions": [1, { ".tsx": "never", ".ts": "never" }],
+        "semi": 1 
     }
 }
