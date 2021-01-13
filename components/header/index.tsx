@@ -1,8 +1,10 @@
 import React from "react";
 import { Box, Flex, Text } from "@chakra-ui/react";
 import {maxWidth, padding} from 'components/layout';
-import MenuItem from './MenuItem';
+import DesktopMenu from "./DesktopMenu";
+import MobileMenu from "./MobileMenu";
 
+const BottomShadow = () => <Box left="0" top="0" right="0" bottom="0" boxShadow="lg" position="absolute" pointerEvents="none" />;
 
 const Header = () => (
   <Box width="100%" position="relative" px={padding}>
@@ -10,12 +12,10 @@ const Header = () => (
       <Box mr="24">
         <Text fontWeight="800">LOGO</Text>
       </Box>
-      <Flex flex="1">
-        <MenuItem href="/">Books</MenuItem>
-        <MenuItem href="/publishers">Publishers</MenuItem>
-      </Flex>
+      <DesktopMenu />
+      <MobileMenu />
     </Flex>
-    <Box left="0" top="0" right="0" bottom="0" boxShadow="lg" position="absolute" pointerEvents="none" />
+    <BottomShadow />
   </Box>
 );
  
