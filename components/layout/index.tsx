@@ -8,7 +8,7 @@ interface Props {
 };
 
 export const maxWidth = '1200px';
-export const padding = "8";
+export const padding = { base: '3', md: "16" };
 
 const Layout = ({ children }: Props) => (
   <Flex direction="column" minHeight="120vh">
