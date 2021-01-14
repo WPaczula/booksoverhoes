@@ -7,7 +7,7 @@ interface Props {
 };
 
 const Content = ({ children }: Props) => (
-  <Flex flex="1" background="background.500" px={padding}>
+  <Flex flex="1" background="background.500" mt={{ base: '2.5rem', md: '3.75rem' }} px={padding}>
     <Flex direction="column" align="center" maxWidth={{ xl: maxWidth}} mx="auto" mt="2">
       {children}
     </Flex>

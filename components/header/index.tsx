@@ -7,7 +7,7 @@ import MobileMenu from "./MobileMenu";
 const BottomShadow = () => <Box left="0" top="0" right="0" bottom="0" boxShadow="lg" position="absolute" pointerEvents="none" />;
 
 const Header = () => (
-  <Box width="100%" position="relative" px={padding}>
+  <Box width="100%" position="fixed" px={padding} background="white">
     <Flex maxWidth={{ xl: maxWidth }} m="0 auto" alignItems="center">
       <Box mr="24">
         <Text fontWeight="800">LOGO</Text>

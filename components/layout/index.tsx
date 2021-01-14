@@ -11,7 +11,7 @@ export const maxWidth = '1200px';
 export const padding = "8";
 
 const Layout = ({ children }: Props) => (
-  <Flex direction="column" minHeight="100vh">
+  <Flex direction="column" minHeight="120vh">
     <Header />
     <Content>
       {children}
